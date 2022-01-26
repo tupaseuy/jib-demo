@@ -15,6 +15,7 @@
 	<description>Demo jib build project</description>
 	<properties>
 		<java.version>17</java.version>
+		<version.number>${git.commit.time}.${git.commit.id.abbrev}</version.number>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -85,7 +86,9 @@
 				<version>3.2.0</version>
 				<configuration>
 					<to>
-						<image>139024385955.dkr.ecr.us-east-1.amazonaws.com/jib-demo:${git.commit.time}-${git.commit.id.abbrev}</image>
+						<image>139024385955.dkr.ecr.us-east-1.amazonaws.com/jib-demo</image>
+						<credHelper>ecr-login</credHelper>
+						<tags>${version.number}</tags>
 					</to>
 				</configuration>
 			</plugin>
