@@ -88,7 +88,7 @@
 					<to>
 						<image>139024385955.dkr.ecr.us-east-1.amazonaws.com/jib-demo</image>
 						<credHelper>ecr-login</credHelper>
-						<tags>${version.number}</tags>
+						<tags>latest,${version.number}</tags>
 					</to>
 				</configuration>
 			</plugin>
